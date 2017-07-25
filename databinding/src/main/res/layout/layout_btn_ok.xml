@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--this btn can be included anywhere, you can set the text, and provide your click listener-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="text"
+            type="String"/>
+
+        <variable
+            name="listener"
+            type="com.cdemo.databinding.interfac.IListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="@{listener.clickListener}"
+            tools:text="ok"
+            android:text="@{text}"/>
+    </LinearLayout>
+
+</layout>

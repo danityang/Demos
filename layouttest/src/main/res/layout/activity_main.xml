@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/common_padding">
+
+        <TextView
+            android:id="@+id/tv_clockon_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="考勤日期"
+            android:textSize="@dimen/common_text_size" />
+
+        <TextView
+            android:id="@+id/tv_clockon_datepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_left"
+            android:layout_toRightOf="@id/tv_clockon_date"
+            android:hint="点击选择日期"
+            android:text=""
+            android:textColorHint="@color/common_hint_color"
+            android:textSize="@dimen/common_text_size" />
+    </RelativeLayout>
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+</LinearLayout>

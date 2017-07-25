@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="mainViewModel"
+            type="com.cdemo.delrecyclerviewitem.viewmodel.MainViewModel" />
+
+        <variable
+            name="editListener"
+            type="com.cdemo.delrecyclerviewitem.model.IEditAbleListener" />
+
+        <variable
+            name="listener"
+            type="com.cdemo.delrecyclerviewitem.model.Listener" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="#ffffff"
+            android:gravity="center"
+            android:onClick="@{editListener.editable}"
+            android:text="编辑"
+            android:textSize="20sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="@{listener.removeItem}"
+            android:text="RemoveItem"
+            android:visibility="@{mainViewModel.delBtnVisiable ? View.VISIBLE : View.GONE}" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="info"
+            type="com.cdemo.databinding.bean.Info" />
+
+        <variable
+            name="listener"
+            type="com.cdemo.databinding.interfac.IListener" />
+
+        <variable
+            name="text"
+            type="String" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_input"
+            layout="@layout/layout_input" />
+
+        <include
+            layout="@layout/user"
+            bind:info="@{info}" />
+
+        <include
+            layout="@layout/layout_btn_ok"
+            bind:listener="@{listener}"
+            bind:text="@{text}" />
+    </LinearLayout>
+
+</layout>
