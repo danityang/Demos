@@ -3,11 +3,8 @@ package com.cdemo.recyclerview;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
@@ -43,19 +40,20 @@ public class MainActivity extends AppCompatActivity {
         2.GridLayoutManager即表格布局
         3.StaggeredGridLayoutManager即流式布局，如瀑布流效果*/
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(OrientationHelper.VERTICAL);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,4);
-        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
+//        linearLayoutManager.setOrientation(OrientationHelper.VERTICAL);
+//        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,4);
+//        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
 
 
-//        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setLayoutManager(linearLayoutManager);
 //        recyclerView.setLayoutManager(gridLayoutManager);
-        recyclerView.setLayoutManager(staggeredGridLayoutManager);
+//        recyclerView.setLayoutManager(staggeredGridLayoutManager);
         recyclerView.setAdapter(adapter);
         // 添加分割线，后面的参数表示是横线还是竖线，0，横线 1，竖线
 //        recyclerView.addItemDecoration(new DividerItemDecoration(MainActivity.this,0));
 //        recyclerView.addItemDecoration(new LinearItemDecoration(MainActivity.this, LinearLayoutManager.VERTICAL));
-        recyclerView.addItemDecoration(new GridItemDecoration(this));
+//        recyclerView.addItemDecoration(new GridItemDecoration(this));
+//        recyclerView.addItemDecoration(new DividerItemDecoration(MainActivity.this, 1));
 
         // iteM动画
         recyclerView.setItemAnimator(new DefaultItemAnimator());

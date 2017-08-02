@@ -42,5 +42,9 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, CustomBinding.class));
     }
 
+    public void multiLayoutRecyclerView(View v){
+        startActivity(new Intent(MainActivity.this, MultiLayoutRecyclerView.class));
+    }
+
 
 }

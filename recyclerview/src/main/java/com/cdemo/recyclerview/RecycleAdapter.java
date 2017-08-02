@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,7 +16,6 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
 
     private List<String> list;
     private Context context;
-    private LayoutInflater inflater;
     private ItemClickListener itemClickListener;
     // item随机高度
     private List<Integer> mRandomHeightList;
@@ -29,19 +27,18 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
     public RecycleAdapter(List<String> list, Context context) {
         this.list = list;
         this.context = context;
-        inflater = LayoutInflater.from(context);
 
-        mRandomHeightList = new ArrayList<Integer>();
+        /*mRandomHeightList = new ArrayList<Integer>();
         for (int i = 0; i < list.size(); i++)
         {
             mRandomHeightList.add( (int) (100 + Math.random() * 300));
-        }
+        }*/
     }
 
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.item, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
         MyViewHolder vh = new MyViewHolder(view);
         return vh;
     }
@@ -49,10 +46,10 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHo
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         // 瀑布流随机高度实现
-        ViewGroup.LayoutParams lp = holder.tv.getLayoutParams();
-        lp.height = mRandomHeightList.get(position);
+        /*ViewGroup.LayoutParams lp = holder.tv.getLayoutParams();
+        lp.height = mRandomHeightList.get(position);*/
 
-        holder.tv.setLayoutParams(lp);
+//        holder.tv.setLayoutParams(lp);
         holder.tv.setText(list.get(position));
 
         // item时间监听

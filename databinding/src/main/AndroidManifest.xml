@@ -19,6 +19,7 @@
         <activity android:name=".function.activity.ViewShowAndHide"/>
         <activity android:name=".function.activity.CustomBinding"/>
         <activity android:name=".function.activity.ResourceBinding"/>
+        <activity android:name=".function.activity.MultiLayoutRecyclerView"/>
     </application>
 
 </manifest>

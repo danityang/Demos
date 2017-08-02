@@ -61,5 +61,11 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:onClick="dataBindingCustom_s"
             android:text="DataBindingCustom_s" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:onClick="multiLayoutRecyclerView"
+            android:text="MultiLayoutRecyclerView" />
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
