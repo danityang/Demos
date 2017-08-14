@@ -1,0 +1,1 @@
+include ':app', ':loopviewpager', ':softreference', ':datacache', ':md5', ':tabcontainerview', ':mvpmode', ':androidmvpdemo', ':customview', ':annotationsdemo', ':activitystartmode', ':recyclerview', ':rxjavademo', ':retrofitdemo', ':barlayout', ':layouttest', ':databinding', ':delrecyclerviewitem', ':databindingcheckbox', ':loadmorerecyclerview'

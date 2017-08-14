@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.annotation.Target"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Retention"/>
+<fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Documented"/>
+<fullyQualifiedTypeName name="com.yd.test.javareflect.ReflectClass"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.yd.test.javareflect.BaseReflectClass"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+<fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.Class.Field"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+<fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
+<fullyQualifiedTypeName name="com.yd.annotationstest.IAnno"/>
+<fullyQualifiedTypeName name="com.yd.annotationstest.AnnoClass"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Annotation"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Modifier"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Inherited"/>
+<fullyQualifiedTypeName name="com.yd.test.fanxing.Mian.TestClass"/>
+<fullyQualifiedTypeName name="com.yd.test.fanxing.ClassB"/>
+<fullyQualifiedTypeName name="com.yd.test.NeibClass"/>
+<fullyQualifiedTypeName name="com.yd.test.builder.Person.Builder"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+</qualifiedTypeNameHistroy>

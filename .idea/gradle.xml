@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/activitystartmode" />
+            <option value="$PROJECT_DIR$/androidmvpdemo" />
+            <option value="$PROJECT_DIR$/annotationsdemo" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/barlayout" />
+            <option value="$PROJECT_DIR$/customview" />
+            <option value="$PROJECT_DIR$/databinding" />
+            <option value="$PROJECT_DIR$/databindingcheckbox" />
+            <option value="$PROJECT_DIR$/datacache" />
+            <option value="$PROJECT_DIR$/delrecyclerviewitem" />
+            <option value="$PROJECT_DIR$/layouttest" />
+            <option value="$PROJECT_DIR$/loadmorerecyclerview" />
+            <option value="$PROJECT_DIR$/loopviewpager" />
+            <option value="$PROJECT_DIR$/md5" />
+            <option value="$PROJECT_DIR$/mvpmode" />
+            <option value="$PROJECT_DIR$/recyclerview" />
+            <option value="$PROJECT_DIR$/retrofitdemo" />
+            <option value="$PROJECT_DIR$/rxjavademo" />
+            <option value="$PROJECT_DIR$/softreference" />
+            <option value="$PROJECT_DIR$/tabcontainerview" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,17 @@
+
+public class YuTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int position = 0;
+		int size = 5;
+		
+		System.out.println(position%size);
+
+	}
+
+}

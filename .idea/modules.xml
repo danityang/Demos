@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Demos.iml" filepath="$PROJECT_DIR$/Demos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activitystartmode/activitystartmode.iml" filepath="$PROJECT_DIR$/activitystartmode/activitystartmode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidmvpdemo/androidmvpdemo.iml" filepath="$PROJECT_DIR$/androidmvpdemo/androidmvpdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annotationsdemo/annotationsdemo.iml" filepath="$PROJECT_DIR$/annotationsdemo/annotationsdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/barlayout/barlayout.iml" filepath="$PROJECT_DIR$/barlayout/barlayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customview/customview.iml" filepath="$PROJECT_DIR$/customview/customview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databinding/databinding.iml" filepath="$PROJECT_DIR$/databinding/databinding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databindingcheckbox/databindingcheckbox.iml" filepath="$PROJECT_DIR$/databindingcheckbox/databindingcheckbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datacache/datacache.iml" filepath="$PROJECT_DIR$/datacache/datacache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/delrecyclerviewitem/delrecyclerviewitem.iml" filepath="$PROJECT_DIR$/delrecyclerviewitem/delrecyclerviewitem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/layouttest/layouttest.iml" filepath="$PROJECT_DIR$/layouttest/layouttest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loadmorerecyclerview/loadmorerecyclerview.iml" filepath="$PROJECT_DIR$/loadmorerecyclerview/loadmorerecyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loopviewpager/loopviewpager.iml" filepath="$PROJECT_DIR$/loopviewpager/loopviewpager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/md5/md5.iml" filepath="$PROJECT_DIR$/md5/md5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvpmode/mvpmode.iml" filepath="$PROJECT_DIR$/mvpmode/mvpmode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recyclerview/recyclerview.iml" filepath="$PROJECT_DIR$/recyclerview/recyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retrofitdemo/retrofitdemo.iml" filepath="$PROJECT_DIR$/retrofitdemo/retrofitdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/softreference/softreference.iml" filepath="$PROJECT_DIR$/softreference/softreference.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabcontainerview/tabcontainerview.iml" filepath="$PROJECT_DIR$/tabcontainerview/tabcontainerview.iml" />
+    </modules>
+  </component>
+</project>
