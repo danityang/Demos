@@ -31,10 +31,10 @@ public class MainActivity1 extends AppCompatActivity {
 
 
     /**
-     * 变换
+     * TODO 变换
      * <p>
      * 例 把传进去的String类型参数转化为Bitmap
-     * Observable.just("images/logo.png") // 输入类型 String
+     * TODO Observable.just("images/logo.png") // 输入类型 String
      * .map(new Func1<String, Bitmap>() {
      *
      * @Override public Bitmap call(String filePath) { // 参数类型 String
@@ -49,7 +49,7 @@ public class MainActivity1 extends AppCompatActivity {
      */
     private void function1() {
 
-        // 这个例子把传进去的参数由String转换为String[]数组
+        // TODO 这个例子把传进去的参数由String转换为String[]数组
         Observable.just("").map(new Func1<String, String[]>() {
 
             @Override
@@ -67,11 +67,13 @@ public class MainActivity1 extends AppCompatActivity {
                 });
 
         /**
-         * 或者
-         * Student[] students = ...;
+         * TODO 或者
+         * TODO Student[] students = ...;
          *
          Subscriber<String> subscriber = new Subscriber<String>() {
-        @Override public void onNext(String name) {
+
+         @Override
+        public void onNext(String name) {
         Log.d(tag, name);
         }
         ...
@@ -79,7 +81,8 @@ public class MainActivity1 extends AppCompatActivity {
 
          Observable.from(students)
          .map(new Func1<Student, String>() {
-        @Override public String call(Student student) {
+        @Override
+        public String call(Student student) {
         return student.getName();
         }
         })
@@ -88,9 +91,9 @@ public class MainActivity1 extends AppCompatActivity {
          */
 
         /**
-         * 这里出现了一个叫做 Func1 的类。它和 Action1 非常相似，也是 RxJava 的一个接口，用于包装含有一个参数的方法。
-         * Func1 和 Action 的区别在于， Func1 包装的是有返回值的方法。
-         * 另外，和 ActionX 一样， FuncX 也有多个，用于不同参数个数的方法。FuncX 和 ActionX 的区别在 FuncX 包装的是有返回值的方法。
+         * TODO 这里出现了一个叫做 Func1 的类。它和 Action1 非常相似，也是 RxJava 的一个接口，用于包装含有一个参数的方法。
+         * TODO Func1 和 Action 的区别在于， Func1 包装的是有返回值的方法。
+         * TODO 另外，和 ActionX 一样， FuncX 也有多个，用于不同参数个数的方法。FuncX 和 ActionX 的区别在 FuncX 包装的是有返回值的方法。
          */
 
     }
@@ -108,12 +111,10 @@ public class MainActivity1 extends AppCompatActivity {
         Subscriber<Course> subscribler = new Subscriber<Course>() {
             @Override
             public void onCompleted() {
-
             }
 
             @Override
             public void onError(Throwable e) {
-
             }
 
             @Override
@@ -127,17 +128,14 @@ public class MainActivity1 extends AppCompatActivity {
 
             @Override
             public void onCompleted() {
-
             }
 
             @Override
             public void onError(Throwable e) {
-
             }
 
             @Override
             public void onNext(Students students) {
-
             }
 
         };

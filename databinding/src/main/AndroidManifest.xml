@@ -14,10 +14,10 @@
         <activity android:name=".function.activity.BasicSample"/>
         <activity android:name=".function.activity.IncludeLayout"/>
         <activity android:name=".function.activity.CollectionLayout"/>
-        <activity android:name=".function.activity.RecyclerViewLayout"/>
-        <activity android:name=".function.activity.RecyclerViewLayoutOfBean"/>
+        <activity android:name=".function.activity.RecyclerViewScroll"/>
+        <activity android:name=".function.activity.RecyclerViewWithDataBinding"/>
         <activity android:name=".function.activity.ViewShowAndHide"/>
-        <activity android:name=".function.activity.CustomBinding"/>
+        <activity android:name=".function.activity.CustomBindingAdapter"/>
         <activity android:name=".function.activity.ResourceBinding"/>
         <activity android:name=".function.activity.MultiLayoutRecyclerView"/>
     </application>

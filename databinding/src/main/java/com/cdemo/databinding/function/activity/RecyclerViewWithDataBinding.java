@@ -18,7 +18,7 @@ import com.cdemo.databinding.interfac.ClickListener;
  * Created by yangdi on 2017/7/3.
  */
 
-public class RecyclerViewLayoutOfBean extends BaseActivity implements ClickListener{
+public class RecyclerViewWithDataBinding extends BaseActivity implements ClickListener{
 
     BindingAdapterOfBean adapter;
     ObservableList<RecyclerBean> observableList = new ObservableArrayList<>();
@@ -40,14 +40,14 @@ public class RecyclerViewLayoutOfBean extends BaseActivity implements ClickListe
         LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());
         binding.recyclerview.setLayoutManager(manager);
         binding.recyclerview.setAdapter(adapter);
-        binding.recyclerview.addItemDecoration(new DividerItemDecoration(RecyclerViewLayoutOfBean.this, 1));
+        binding.recyclerview.addItemDecoration(new DividerItemDecoration(RecyclerViewWithDataBinding.this, 1));
 
         adapter.notifyDataSetChanged();
     }
 
     @Override
     public void onItemClick(int postion) {
-        Toast.makeText(RecyclerViewLayoutOfBean.this, "Click "+ postion, Toast.LENGTH_LONG).show();
+        Toast.makeText(RecyclerViewWithDataBinding.this, "Click "+ postion, Toast.LENGTH_LONG).show();
         observableList.remove(observableList.get(postion));
         adapter.notifyDataSetChanged();
     }

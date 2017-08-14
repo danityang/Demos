@@ -17,7 +17,7 @@ import java.util.List;
  * Created by yangdi on 2017/7/3.
  */
 
-public class RecyclerViewLayout extends BaseActivity {
+public class RecyclerViewScroll extends BaseActivity {
 
     BindingAdapter adapter;
     List<String> list = new ArrayList<>();

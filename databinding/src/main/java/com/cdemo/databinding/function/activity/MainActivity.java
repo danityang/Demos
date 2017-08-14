@@ -23,11 +23,11 @@ public class MainActivity extends BaseActivity {
     }
 
     public void collectionClick(View v){
-        startActivity(new Intent(MainActivity.this, RecyclerViewLayout.class));
+        startActivity(new Intent(MainActivity.this, RecyclerViewScroll.class));
     }
 
     public void recyclerViewClick(View v){
-        startActivity(new Intent(MainActivity.this, RecyclerViewLayoutOfBean.class));
+        startActivity(new Intent(MainActivity.this, RecyclerViewWithDataBinding.class));
     }
 
     public void viewShowAndHideClick(View v){
@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity {
     }
 
     public void dataBindingCustom_s(View v){
-        startActivity(new Intent(MainActivity.this, CustomBinding.class));
+        startActivity(new Intent(MainActivity.this, CustomBindingAdapter.class));
     }
 
     public void multiLayoutRecyclerView(View v){

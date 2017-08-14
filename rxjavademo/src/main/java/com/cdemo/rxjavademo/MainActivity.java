@@ -35,13 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * RxJava基本使用
-     *
+     * TODO RxJava基本使用
      * 传递Strig类型字符串
      */
     private void function1() {
 
-        // 创建观察者
+        // TODO 创建观察者的几种基本方式
         Observer<String> observer = new Observer<String>() {
 
             @Override
@@ -51,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(Throwable e) {
-
             }
 
             @Override
@@ -60,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        // 也可通过Subscriber创建观察者
+        // TODO 也可通过Subscriber创建观察者，Subscriber同样是观察者的意思,与Observer的区别在于Subscriber新增了两个方法，onStart()和unsubscribe()
+        // TODO onStart()用于一些准备工作，unsubscribe()是 Subscriber 所实现的另一个接口 Subscription 的方法，用于取消订阅
         Subscriber<String> subscribler = new Subscriber<String>() {
             @Override
             public void onCompleted() {
@@ -69,15 +68,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(Throwable e) {
-
             }
 
             @Override
             public void onNext(String s) {
                 Log.i(TAG, "Subscriber onNext: " + s);
             }
-
         };
+
 
         // 创建被观察者第一种方式
         Observable observable = Observable.create(new Observable.OnSubscribe<String>() {
@@ -88,13 +86,13 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        // 下面两种方式都是按顺序执行参数
+        // TODO 下面两种方式都是按顺序执行参数，just——> 按顺序执行括号里的内容
         Observable<String> observable1 = Observable.just("str1", "str2", "str3");
         String str[] = new String[]{"str3", "str4", "str5"};
-        // 将传入的数组或 Iterable 拆分成具体对象后，依次发送出来。
+        // TODO  同just用法, from——> 将传入的数组或 Iterable 拆分成具体对象后，依次发送出来。
         Observable<String> observable2 = Observable.from(str);
 
-        // 订阅
+        // TODO 订阅——>被观察者订阅观察者，写法是相反的
         observable.subscribe(observer);
         observable.subscribe(subscribler);
         observable1.subscribe(observer);
@@ -102,11 +100,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+// ****************************************TODO 观察者和被观察者的不完整回调********************************************* //
     /**
-     * RxJava不完整回调、写法
+     * TODO RxJava不完整回调、写法
      */
     private void function2() {
-
 
         /**
          *  Action0 是 RxJava 的一个接口，它只有一个方法 call()，这个方法是无参无返回值的；
@@ -133,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
                 // Error handling
             }
         };
+        // TODO Action0无参， Action1有参，有返回值
         Action0 onCompletedAction = new Action0() {
             // onCompleted()
             @Override
@@ -149,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 自动创建观察者
+        // TODO 自动创建观察者，下同
         observable.subscribe(onNextAction);
         // 自动创建 Subscriber ，并使用 onNextAction 和 onErrorAction 来定义 onNext() 和 onError()
         observable.subscribe(onNextAction, onErrorAction);
@@ -157,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
         observable.subscribe(onNextAction, onErrorAction, onCompletedAction);
 
 
-        // 可以以下简洁写法
+        // TODO 创建和订阅的简洁写法
         Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
@@ -166,31 +165,26 @@ public class MainActivity extends AppCompatActivity {
         }).subscribe(new Observer<String>() {
             @Override
             public void onCompleted() {
-
             }
 
             @Override
             public void onError(Throwable e) {
-
             }
 
             @Override
             public void onNext(String s) {
-
             }
         });
     }
 
 
     /**
-     * 线程控制 Scheduler调度器
-     *
-     *
-     Schedulers.immediate(): 直接在当前线程运行，相当于不指定线程。这是默认的 Scheduler。
-     Schedulers.newThread(): 总是启用新线程，并在新线程执行操作。
-     Schedulers.io(): I/O 操作（读写文件、读写数据库、网络信息交互等）所使用的 Scheduler。行为模式和 newThread() 差不多，区别在于 io() 的内部实现是是用一个无数量上限的线程池，可以重用空闲的线程，因此多数情况下 io() 比 newThread() 更有效率。不要把计算工作放在 io() 中，可以避免创建不必要的线程。
-     Schedulers.computation(): 计算所使用的 Scheduler。这个计算指的是 CPU 密集型计算，即不会被 I/O 等操作限制性能的操作，例如图形的计算。这个 Scheduler 使用的固定的线程池，大小为 CPU 核数。不要把 I/O 操作放在 computation() 中，否则 I/O 操作的等待时间会浪费 CPU。
-     另外， Android 还有一个专用的 AndroidSchedulers.mainThread()，它指定的操作将在 Android 主线程运行。
+     * TODO 线程控制 Scheduler调度器
+     TODO Schedulers.immediate(): 直接在当前线程运行，相当于不指定线程。这是默认的 Scheduler。
+     TODO Schedulers.newThread(): 总是启用新线程，并在新线程执行操作。
+     TODO Schedulers.io(): I/O 操作（读写文件、读写数据库、网络信息交互等）所使用的 Scheduler。行为模式和 newThread() 差不多，区别在于 io() 的内部实现是是用一个无数量上限的线程池，可以重用空闲的线程，因此多数情况下 io() 比 newThread() 更有效率。不要把计算工作放在 io() 中，可以避免创建不必要的线程。
+     TODO Schedulers.computation(): 计算所使用的 Scheduler。这个计算指的是 CPU 密集型计算，即不会被 I/O 等操作限制性能的操作，例如图形的计算。这个 Scheduler 使用的固定的线程池，大小为 CPU 核数。不要把 I/O 操作放在 computation() 中，否则 I/O 操作的等待时间会浪费 CPU。
+     另外， Android 还有一个专用的 TODO AndroidSchedulers.mainThread()，它指定的操作将在 Android 主线程运行。
      */
     private void function3() {
 
@@ -199,8 +193,8 @@ public class MainActivity extends AppCompatActivity {
             public void call(Subscriber<? super String> subscriber) {
                 subscriber.onNext("线程控制Scheduler");
             }
-        }).subscribeOn(Schedulers.io())// 指定 subscribe() 发生在 IO 线程
-                .observeOn(AndroidSchedulers.mainThread())// 指定 Subscriber 的回调发生在主线程
+        }).subscribeOn(Schedulers.io())// TODO 指定订阅和被订阅发生在 IO 线程
+                .observeOn(AndroidSchedulers.mainThread())// TODO 完成后回调发生在哪个线程
                 .subscribe(new Action1<String>() {
                     @Override
                     public void call(String s) {
